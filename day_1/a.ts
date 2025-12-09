@@ -9,7 +9,7 @@ for (const line of lines) {
   const num = parseInt(line.slice(1), 10);
 
   if (dir === "L") {
-    curr = (curr - num) % 100;
+    curr = (((curr - num) % 100) + 100) % 100;
   } else if (dir === "R") {
     curr = (((curr + num) % 100) + 100) % 100;
   }
